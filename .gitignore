@@ -1,2 +1,5 @@
 /spec
 /source
+/node_modules
+/www/css/prepros.cfg
+/www/css/style.scss
