@@ -3,3 +3,9 @@
 /node_modules
 /www/css/prepros.cfg
 /www/css/style.scss
+
+/vendor
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
