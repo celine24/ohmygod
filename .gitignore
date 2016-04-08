@@ -1,8 +1,8 @@
 /spec
 /source
-/node_modules
-/www/css/prepros.cfg
-/www/css/style.scss
+/public/node_modules
+/public/css/prepros.cfg
+/public/css/style.scss
 
 /vendor
 /public/storage
