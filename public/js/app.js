@@ -1,4 +1,5 @@
-var omgApp = angular.module('omgApp', ['ngRoute']);
+var omgApp = angular.module('omgApp', ['ngRoute'])
+    .constant('API_URL', 'http://localhost:8000/api/');
 
 
 omgApp.config(function($routeProvider, $locationProvider) {
@@ -8,8 +9,8 @@ omgApp.config(function($routeProvider, $locationProvider) {
             //controller: 'js/controller/HomeCtrl'
         })
         .when('/pvs', {
-            templateUrl: 'templates/pvs.blade.php'
-            //controller: 'PvsCtrl'
+            templateUrl: 'templates/pvs.blade.php',
+            controller: 'pvsCtrl'
         })
         .when('/pvs/:id', {
             templateUrl: 'templates/pv-introduction.blade.php'

@@ -1,7 +1,4 @@
 PVS TEMPLATE
-
-@foreach ($pvs as $pv)
-
-    {{ $pv->celebrity }}
-
-@endforeach
+<ul>
+    <li ng-repeat="pv in pvs"><p>{{ pv.celebrity }}</p></li>
+</ul>

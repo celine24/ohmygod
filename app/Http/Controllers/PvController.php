@@ -2,7 +2,6 @@
 
 use App\Pv;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Response;
 
 
 class PvController extends Controller {
@@ -12,9 +11,14 @@ class PvController extends Controller {
    *
    * @return Response
    */
-  public function index()
+  public function index($id = null)
   {
-    return \Response::json(Pv::get());
+    if ($id == null) {
+      return Pv::orderBy('id')->get();
+    }
+    else {
+      return $this->show($id);
+    }
   }
 
   /**
