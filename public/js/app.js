@@ -1,27 +1,24 @@
-var omgApp = angular.module('omgApp', [require('angular-route')]);
+var omgApp = angular.module('omgApp', ['ngRoute']);
 
-omgApp.config(function($routeProvider) {
+
+omgApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: 'welcome.blade.php',
-            controller : 'homeController'
+        .when('/',{
+            templateUrl: 'templates/home.blade.php'
+            //controller: 'js/controller/HomeCtrl'
         })
-        .when('/pv', {
-            templateUrl: 'pv-introduction.html,
-            controller : 'moviesController'
+        .when('/pvs', {
+            templateUrl: 'templates/pvs.blade.php'
+            //controller: 'PvsCtrl'
         })
-        .when('/movies/:id', {
-            templateUrl: 'partials/movies.html',
-            controller : 'moviesController'
-        })
-        .when('/movies/edit/:id', {
-            templateUrl: 'partials/edit.html',
-            controller : 'editController'
+        .when('/pvs/:id', {
+            templateUrl: 'templates/pv-introduction.blade.php'
+            //controller : 'PvCtrl'
         })
         .otherwise({
             redirectTo: '/'
         });
+
+    $locationProvider.html5Mode(true).hashPrefix('!');
 });
 
-
-var pvs = angular.module("pvs", []);

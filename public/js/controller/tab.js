@@ -1,7 +1,7 @@
 /**
  * Created by PeopleAre on 31/03/2016.
  */
-pvs.controller("tabCtrl", function($scope) {
+omgApp.controller("tabCtrl", function($scope) {
 
     this.tab = 'greek-identity';
     this.host = 'host-identity';

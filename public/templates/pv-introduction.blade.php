@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>OH MY GOD !</title>
-    <link href="../../../public/node_modules/normalize.css/normalize.css" type="text/css" rel="stylesheet" />
-    <link href="../../../public/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="../node_modules/normalize.css/normalize.css" type="text/css" rel="stylesheet" />
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
 </head>
 <body ng-app="pvs">
 
@@ -13,7 +13,7 @@
         <div class="omg-pv-container" ng-controller="pvController">
             <section class="omg-pv-header">
                 <div class="omg-pv-bann-container">
-                    <img src="../../../public/img/pvs/dieux/bann/zeus.png" />
+                    <img src="../img/pvs/dieux/bann/zeus.png" />
                 </div>
 
 
@@ -103,9 +103,9 @@
 
     </div>
 
-    <script src="../../../public/node_modules/angular/angular.js" type="text/javascript"> </script>
-    <script src="../../../public/js/app.js" type="text/javascript"> </script>
-    <script src="../../../public/js/controller/tab.js" type="text/javascript"> </script>
-    <script src="../../../public/js/controller/pv.js" type="text/javascript"> </script>
+    <script src="../node_modules/angular/angular.js" type="text/javascript"> </script>
+    <script src="../js/app.js" type="text/javascript"> </script>
+    <script src="../js/controller/tab.js" type="text/javascript"> </script>
+    <script src="../js/controller/pv.js" type="text/javascript"> </script>
 </body>
 </html>

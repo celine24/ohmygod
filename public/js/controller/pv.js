@@ -1,4 +1,4 @@
-pvs.controller("pvController", function($scope) {
+omgApp.controller("pvController", function($scope) {
 
     $scope.relVisible = false;
     $scope.show = function () {

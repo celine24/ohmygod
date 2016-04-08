@@ -13,14 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
 });
 
 
-
-Route::get('/', 'PvController@index');
-
-Route::resource('pv', 'PvController');
+//
+//Route::resource('pv', 'PvController');
 Route::resource('group', 'GroupController');
 Route::resource('relationship', 'RelationshipController');
 Route::resource('greek', 'GreekController');

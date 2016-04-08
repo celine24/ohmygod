@@ -13,10 +13,9 @@ class PvController extends Controller {
    */
   public function index()
   {
-    $pvs = Pv::all();
+    $pvs = Pv::all()->toJson();
 
     $perso = Pv::find(1);
-
     return view('pvs', compact('pvs', 'perso'));
   }
 
