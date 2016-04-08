@@ -7,16 +7,13 @@ use App\Http\Controllers\Controller;
 class PvController extends Controller {
 
   /**
-   * Display a listing of the resource.
+   * Send back all pvs as JSON
    *
    * @return Response
    */
   public function index()
   {
-    $pvs = Pv::all()->toJson();
-
-    $perso = Pv::find(1);
-    return view('pvs', compact('pvs', 'perso'));
+    return Response::json(Pv::get());
   }
 
   /**
