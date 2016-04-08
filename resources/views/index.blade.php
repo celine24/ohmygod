@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>OH MY GOD !</title>
     <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet" />
-    <base href="/" />
+    {{--<base href="/" />--}}
 
 </head>
 <body>
@@ -12,8 +12,8 @@
     <h1>Oh My God ! Bienvenue :D</h1>
 
     <ul class="nav">
-        <li><a class="brand" href="/">home</a></li>
-        <li><a href="pvs">pv</a></li>
+        <li><a class="brand" href="#/">home</a></li>
+        <li><a href="#/pvs">pv</a></li>
     </ul>
 </header>
 <div class="container" ng-view>

@@ -2,6 +2,7 @@
 
 use App\Pv;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Response;
 
 
 class PvController extends Controller {
@@ -13,7 +14,7 @@ class PvController extends Controller {
    */
   public function index()
   {
-    return Response::json(Pv::get());
+    return \Response::json(Pv::get());
   }
 
   /**
