@@ -1,5 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+* { box-sizing: border-box; }
+
 .omg-main-container {
   max-width:900px;
   width:100%;
   margin:auto;
+}
+
+a {
+  text-decoration : none !important;
+}
+
+.olympianBg {
+  background-color: $olympian;
+}
+
+.minorGodBg {
+  background-color: $minorGod;
+}
+
+.nymphBg {
+  background-color: $nymph;
+}
+
+.museBg {
+  background-color: $muse;
+}
+
+.creatureBg {
+  background-color: $creature;
+}
+
+.humanBg {
+  background-color: $human;
+}
+
+.olympianBorder {
+  border-bottom : 5px solid $olympian;
 }

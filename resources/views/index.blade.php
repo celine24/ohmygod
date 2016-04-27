@@ -1,31 +1,27 @@
-<!DOCTYPE html>
-<html lang="fr" ng-app="omgApp">
-<head>
-    <meta charset="UTF-8">
-    <title>OH MY GOD !</title>
-    <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet" />
-    {{--<base href="/" />--}}
+@extends('layout.header')
 
-</head>
-<body>
 <header>
-    <h1>Oh My God ! Bienvenue :D</h1>
+    <div class="omg-main-header">
+        <div class="omg-main-header-logo">
 
-    <ul class="nav">
-        <li><a class="brand" href="#/">home</a></li>
-        <li><a href="#/pvs">pv</a></li>
-    </ul>
+        </div>
+        <nav class="omg-main-header-menu">
+            <ul>
+                <li><a class="brand" href="#/">Home</a></li>
+                <li><a class="brand" href="#/">Contexte</a></li>
+                <li><a class="brand" href="#/">Groupes</a></li>
+                <li><a class="brand" href="#/">Annexes</a></li>
+                <li><a href="#/pvs">Prédéfinis</a></li>
+            </ul>
+
+        </nav>
+    </div>
 </header>
-<div class="container" ng-view>
+
+
+<div class="omg-main-container" ng-view>
 
 
 </div>
 
-
-    <script src="{{asset('bower_components/angular/angular.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('bower_components/angular-route/angular-route.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/controller/home.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/controller/pvs.js')}}" type="text/javascript"></script>
-</body>
-</html>
+@extends('layout.footer')

@@ -2,7 +2,7 @@ var omgApp = angular.module('omgApp', ['ngRoute'])
     .constant('API_URL', 'http://localhost:8000/api/');
 
 
-omgApp.config(function($routeProvider, $locationProvider) {
+omgApp.config(function($routeProvider, $locationProvider, $interpolateProvider) {
     $routeProvider
         .when('/',{
             templateUrl: 'templates/home.blade.php'
@@ -19,6 +19,9 @@ omgApp.config(function($routeProvider, $locationProvider) {
         .otherwise({
             redirectTo: '/'
         });
+
+    $interpolateProvider.startSymbol('{[');
+    $interpolateProvider.endSymbol(']}');
 
     //$locationProvider.html5Mode(true).hashPrefix('!');
 });

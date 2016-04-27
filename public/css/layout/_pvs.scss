@@ -1,0 +1,87 @@
+.omg-pvs-container {
+  padding:0;
+  margin-top:50px;
+}
+
+.omg-pvs-groups {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+}
+
+.omg-pvs-group {
+  width: 120px;
+  height:30px;
+  line-height:30px;
+  padding:0 20px;
+  text-align:center;
+  font-family: $mainFontTitle;
+  color: $mainGrey;
+  font-size:18px;
+}
+
+.omg-pvs-pv {
+
+}
+
+.omg-pvs-list {
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content : space-between;
+    list-style: none !important;
+    padding-left: 0;
+
+    li {
+      background-color: $mainGrey;
+      width: 25%;
+      white-space: nowrap;
+    }
+  }
+}
+
+.omg-pv-name-container {
+  width: 100%;
+  margin: 0;
+  padding: 2px;
+}
+
+.omg-pv-img {
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.omg-pv-name {
+  text-align:center;
+  font-family: $mainFontTitle;
+  color: $mainGrey;
+  font-size:18px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.omg-pv-surname {
+  font-family: $mainFont;
+  color: $mainGrey;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.omg-pv-content {
+  color: $darkGrey;
+  text-align: center;
+  font-family: $mainFont;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.omg-pv-titles {
+  height: 50px;
+}
+
+.omg-pv-celebrity {
+  font-size: 10px;
+}

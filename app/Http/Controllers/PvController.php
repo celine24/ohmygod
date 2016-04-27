@@ -13,12 +13,24 @@ class PvController extends Controller {
    */
   public function index($id = null)
   {
-    if ($id == null) {
-      return Pv::orderBy('id')->get();
-    }
-    else {
-      return $this->show($id);
-    }
+
+    $pvs = Pv::with('Group')->with('Greek')->with('Host')->get();
+    return json_encode($pvs);
+//    return Response::json(array('data' => $pvs));
+
+//    if ($id == null) {
+//      $pvs = Pv::orderBy('id')->get();
+//      return $pvs;
+//
+//    }
+//    else {
+//      return $this->show($id);
+//    }
+
+
+//    $pvs = Pv::get();
+//    return view('test', compact('pvs'));
+
   }
 
   /**

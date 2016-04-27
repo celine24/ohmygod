@@ -1,0 +1,31 @@
+header {
+  padding:0;
+  margin:0;
+}
+
+.omg-main-header {
+  background-color: $mainGrey;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+
+.omg-main-header-menu {
+  width: 50%;
+  margin: auto;
+  ul {
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 20px;
+      a {
+        font-family: $mainFontTitle;
+        font-size:20px;
+        color: $darkGrey;
+        display: block;
+        text-shadow: 1px 1px 2px #ffffbe;
+        outline: none;
+      }
+    }
+  }
+}

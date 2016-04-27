@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 
 Route::get('/api/pvs/{id?}', 'PvController@index');
-//Route::post('/api/v1/employees', 'Employees@store');
+Route::get('/api/test', 'PvController@index');
 //Route::post('/api/v1/employees/{id}', 'Employees@update');
 //Route::delete('/api/v1/employees/{id}', 'Employees@destroy');
 

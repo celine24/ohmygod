@@ -9,19 +9,19 @@ class Pv extends Model {
 	protected $table = 'pvs';
 	public $timestamps = true;
 
-	public function pvGreek()
+	public function greek()
 	{
-		return $this->hasOne('Greek', 'greek_id');
+		return $this->belongsTo('App\Greek', 'greek_id');
 	}
 
-	public function pvHost()
+	public function host()
 	{
-		return $this->hasOne('Host', 'host_id');
+		return $this->belongsTo('App\Host', 'host_id');
 	}
 
 	public function group()
 	{
-		return $this->belongsTo('Group');
+		return $this->belongsTo('App\Group', 'group_id');
 	}
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace greek;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,9 +9,9 @@ class Greek extends Model {
 	protected $table = 'greeks';
 	public $timestamps = true;
 
-	public function pv()
-	{
-		return $this->belongsTo('Pv');
-	}
+//	public function pv()
+//	{
+//		return $this->hasOne('App\Pv');
+//	}
 
 }

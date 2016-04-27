@@ -15,6 +15,7 @@ class CreateHostsTable extends Migration {
 			$table->date('birth_date');
 			$table->string('birth_place', 255);
 			$table->string('nationality', 255);
+			$table->string('origins', 255);
 			$table->string('job', 255);
 			$table->string('status', 255);
 			$table->text('personality');

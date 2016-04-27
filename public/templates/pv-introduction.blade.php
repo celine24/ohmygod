@@ -13,7 +13,7 @@
         <div class="omg-pv-container" ng-controller="pvController">
             <section class="omg-pv-header">
                 <div class="omg-pv-bann-container">
-                    <img src="../img/pvs/dieux/bann/zeus.png" />
+                    <img src="../img/pvs/ban-thumb/zeus.png" />
                 </div>
 
 

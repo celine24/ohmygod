@@ -11,7 +11,7 @@ class CreatePvsTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->tinyInteger('group_id')->unsigned();
-			$table->string('status', 200);
+			$table->boolean('status');
 			$table->string('celebrity', 200);
 			$table->text('entente');
 			$table->text('test_rp');
