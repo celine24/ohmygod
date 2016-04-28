@@ -5,6 +5,7 @@
     <title>OH MY GOD !</title>
     <link href="{{asset('bower_components/normalize-css/normalize.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet" />
+    <link href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}" type="text/css" rel="stylesheet" />
     {{--<base href="/" />--}}
 
 </head>

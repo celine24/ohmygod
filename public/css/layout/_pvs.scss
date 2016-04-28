@@ -37,7 +37,46 @@
 .omg-pvs-filterBar {
   background-color: $mainGrey;
   width:100%;
-  height:80px;
+  height:50px;
+  display:flex;
+  justify-content:space-between;
+  flex-flow:row wrap;
+  padding:10px;
+
+  .searchBar {
+    max-width:250px;
+    border-radius:5px;
+    background-color:white;
+    height:30px;
+    padding:2px;
+    input[type=text] {
+      border:none !important;
+
+    }
+    i {
+      color:$mainFontColor;
+      font-size:120%;
+    }
+  }
+
+  .genderFilter {
+
+  }
+
+  i {
+    color:$mainFontColor;
+    font-size:160%;
+    cursor:pointer;
+    &:hover {
+      color:black;
+    }
+  }
+
+  span {
+    font-size:80%;
+    color:$mainFontColor;
+  }
+
 }
 
 .omg-pvs-list {
@@ -94,7 +133,7 @@
 }
 
 .omg-pv-content {
-  color: $darkGrey;
+  color:$mainFontColor;
   text-align: center;
   font-family: $mainFont;
   font-size:80%;
