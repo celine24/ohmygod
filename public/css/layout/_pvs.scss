@@ -75,6 +75,11 @@
   span {
     font-size:80%;
     color:$mainFontColor;
+    cursor:pointer;
+  }
+
+  .activeFilter {
+    color:black;
   }
 
 }

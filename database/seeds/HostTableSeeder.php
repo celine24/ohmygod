@@ -36,5 +36,20 @@ class HostTableSeeder extends Seeder {
 				'gender_orientation' => "Hétérosexuelle",
 				'story' => "Issue d'une famille modeste, peu préoccupée par l'avenir et le bien-être de ses enfants, Rain a toujours conservé sa personnalité fragile, en perpétuel manque d'affection. Petite, elle est peureuse et pleure pour un rien. Elle s'habitue néanmoins à ce que ses parents ne réagissent pas, et à ce que son frère lui intime de se taire. Tandis qu'elle reste coincée dans sa bulle, elle voit ce dernier grandir, faire sa vie et réussir. Ce n'est que lorsqu'il la pousse à bout, prétextant qu'elle n'est qu'un parasite incapable d'autonomie, que Rain commence à se prendre en mains. Elle s'inscrit à l'école d'infirmière, et en ressort diplômée avec succès. Commence alors sa petite ascension dans le monde des adultes. Elle quitte le nid pour emménager en ville et se voit embauchée à l'hôpital d'Auckland, où elle a fait ses gardes. Généreuse et douce, elle est aimée de ses patients -quelques fois trop collants, et souvent moquée par ses collègues, qui abusent de sa gentillesse. Hyper dépendante, elle multiplie également les conquêtes masculines, recherchant chez les hommes la force et l'aspect sécurisant, que son père n'a jamais pu lui offrir. Réservée mais facilement manipulable, elle leur tombe dans les bras comme une fleur et les regarde s'éloigner en pleurant. Car Rain est trop timide, trop soumise et trop fragile pour s'imposer, réclamer son dû ou oser penser qu'elle mérite mieux. "
 			));
+
+		// erzebethSeeder
+		Host::create(array(
+				'lastname' => "Goldfarb",
+				'firstname' => "Erzebeth",
+				'birth_date' => "1987-03-19",
+				'birth_place' => "soon",
+				'nationality' => "Bulgare",
+				'origins' => "soon",
+				'job' => "soon",
+				'status' => "soon",
+				'personality' => "soon",
+				'gender_orientation' => "Hétérosexuelle",
+				'story' => "soon"
+			));
 	}
 }

@@ -12,20 +12,16 @@ a {
   text-decoration : none !important;
 }
 
-.olympianBg {
-  background-color: $olympian;
+.godBg {
+  background-color: $god;
 }
 
-.minorGodBg {
-  background-color: $minorGod;
+.titanBg {
+  background-color: $titan;
 }
 
 .nymphBg {
   background-color: $nymph;
-}
-
-.museBg {
-  background-color: $muse;
 }
 
 .creatureBg {
@@ -40,6 +36,11 @@ a {
   border-bottom : 5px solid $nymph;
 }
 
-.olympianBorder {
-  border-bottom : 5px solid $olympian;
+.godBorder {
+  border-bottom : 5px solid $god;
 }
+
+.creatureBorder {
+  border-bottom : 5px solid $creature;
+}
+

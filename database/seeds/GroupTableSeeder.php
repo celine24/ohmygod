@@ -9,20 +9,20 @@ class GroupTableSeeder extends Seeder {
 	{
 		//DB::table('groups')->delete();
 
-		// olympianSeeder
+		// godSeeder
 		Group::create(array(
-				'name' => "Olympiens",
-				'class' => "olympian",
+				'name' => "Dieux",
+				'class' => "god",
 				'description' => "soon",
 				'number' => 14
 			));
 
-		// minorGodSeeder
+		// titanSeeder
 		Group::create(array(
-				'name' => "Mineurs",
-				'class' => "minorGod",
+				'name' => "Titans",
+				'class' => "titan",
 				'description' => "soon",
-				'number' => 20
+				'number' => 10
 			));
 
 		// nymphSeeder
@@ -47,14 +47,6 @@ class GroupTableSeeder extends Seeder {
 				'class' => "human",
 				'description' => "soon",
 				'number' => 10
-			));
-
-		// museSeeder
-		Group::create(array(
-				'name' => "Muses",
-				'class' => "muse",
-				'description' => "soon",
-				'number' => 7
 			));
 	}
 }
