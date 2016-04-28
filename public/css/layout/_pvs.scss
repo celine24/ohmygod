@@ -4,28 +4,46 @@
 }
 
 .omg-pvs-groups {
-  display:flex;
-  flex-flow:row wrap;
-  justify-content:space-between;
+  ul {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    padding-left:0 !important;
+
+    li {
+      width:120px;
+      height:30px;
+      list-style:none !important;
+    }
+  }
 }
 
 .omg-pvs-group {
-  width: 120px;
-  height:30px;
   line-height:30px;
   padding:0 20px;
   text-align:center;
   font-family: $mainFontTitle;
   color: $mainGrey;
-  font-size:18px;
+  font-size:130%;
+  cursor:pointer;
+  transition: all 0.5s ease-out;
 }
 
-.omg-pvs-pv {
+.active {
+  margin-top:-10px;
+  transition: all 0.5s ease-out;
+}
 
+.omg-pvs-filterBar {
+  background-color: $mainGrey;
+  width:100%;
+  height:80px;
 }
 
 .omg-pvs-list {
+  width:100%;
   ul {
+    width:100%;
     display: flex;
     flex-flow: row wrap;
     justify-content : space-between;
@@ -35,9 +53,13 @@
     li {
       background-color: $mainGrey;
       width: 25%;
-      white-space: nowrap;
+      list-style:none !important;
     }
   }
+}
+
+.omg-pvs-pv {
+  position:relative;
 }
 
 .omg-pv-name-container {
@@ -47,6 +69,7 @@
 }
 
 .omg-pv-img {
+  width:100%;
   margin: 0;
   img {
     width: 100%;
@@ -57,7 +80,7 @@
   text-align:center;
   font-family: $mainFontTitle;
   color: $mainGrey;
-  font-size:18px;
+  font-size:140%;
   text-transform:uppercase;
   letter-spacing:1px;
 }
@@ -65,7 +88,7 @@
 .omg-pv-surname {
   font-family: $mainFont;
   color: $mainGrey;
-  font-size: 11px;
+  font-size:80%;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -74,14 +97,30 @@
   color: $darkGrey;
   text-align: center;
   font-family: $mainFont;
-  font-size: 11px;
-  letter-spacing: 1px;
+  font-size:80%;
+  width:100%;
 }
 
 .omg-pv-titles {
-  height: 50px;
+  padding:10px;
+  font-size:100%;
+  text-align:center;
+  width:100%;
+  min-height:50px;
+}
+
+.omg-pv-availability {
+  min-height:60px;
+  padding:10px;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:90%;
 }
 
 .omg-pv-celebrity {
-  font-size: 10px;
+  font-size: 100%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  padding:10px 10px 2px 10px;
 }

@@ -1,15 +1,19 @@
 <?php namespace App\Http\Controllers;
 
+use App\Group;
+use App\Http\Controllers\Controller;
+
 class GroupController extends Controller {
 
   /**
-   * Display a listing of the resource.
+   * Send back all groups as JSON
    *
    * @return Response
    */
-  public function index()
+  public function index($id = null)
   {
-    
+    $groups = Group::orderBy('id')->get();
+    return json_encode($groups);
   }
 
   /**

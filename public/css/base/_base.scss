@@ -3,7 +3,7 @@
 * { box-sizing: border-box; }
 
 .omg-main-container {
-  max-width:900px;
+  max-width:960px;
   width:100%;
   margin:auto;
 }
@@ -34,6 +34,10 @@ a {
 
 .humanBg {
   background-color: $human;
+}
+
+.nymphBorder {
+  border-bottom : 5px solid $nymph;
 }
 
 .olympianBorder {

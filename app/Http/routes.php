@@ -16,8 +16,8 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::get('/api/pvs/{id?}', 'PvController@index');
-Route::get('/api/test', 'PvController@index');
+Route::resource('/api/pvs', 'PvController');
+Route::resource('/api/groups', 'GroupController');
 //Route::post('/api/v1/employees/{id}', 'Employees@update');
 //Route::delete('/api/v1/employees/{id}', 'Employees@destroy');
 
