@@ -11,17 +11,17 @@
 
     <div class="omg-pvs-filterBar">
         <div class="statusFilter">
-            <span ng-click="filter('free', 'status', 'libre')" ng-class="{'activeFilter' : 'free' == statusActive}">libre</span>
-            <span ng-click="filter('taken', 'status', 'pris')" ng-class="{'activeFilter' : 'taken' == statusActive}">pris</span>
-            <span ng-click="filter('reserved', 'status', 'réservé')" ng-class="{'activeFilter' : 'reserved' == statusActive}">réservé</span>
+            <span ng-click="filter('free', 'status', 'statut', 'libre')" ng-class="{'activeFilter' : 'free' == statusActive}">libre</span>
+            <span ng-click="filter('taken', 'status', 'statut', 'pris')" ng-class="{'activeFilter' : 'taken' == statusActive}">pris</span>
+            <span ng-click="filter('reserved', 'status', 'statut', 'réservé')" ng-class="{'activeFilter' : 'reserved' == statusActive}">réservé</span>
         </div>
         <div class="alreadyPlayedFilter">
-            <span ng-click="filter(1, 'alreadyPlayed', 'déjà joué')" ng-class="{'activeFilter' : 1 == alreadyPlayedActive}">déjà joué</span>
-            <span ng-click="filter(0, 'alreadyPlayed', 'jamais joué')" ng-class="{'activeFilter' : 0 == alreadyPlayedActive}">jamais joué</span>
+            <span ng-click="filter(1, 'alreadyPlayed', 'état', 'déjà joué')" ng-class="{'activeFilter' : 1 == alreadyPlayedActive}">déjà joué</span>
+            <span ng-click="filter(0, 'alreadyPlayed', 'état', 'jamais joué')" ng-class="{'activeFilter' : 0 == alreadyPlayedActive}">jamais joué</span>
         </div>
         <div class="genderFilter">
-            <i class="fa fa-female" aria-hidden="true" ng-click="filter(1, 'gender', {gender : 'femme'})" ng-class="{'activeFilter' : 1 == genderActive}"></i>
-            <i class="fa fa-male" aria-hidden="true" ng-click="filter(0, 'gender', {gender : 'homme'})" ng-class="{'activeFilter' : 0 == genderActive}"></i>
+            <i class="fa fa-female" aria-hidden="true" ng-click="filter(1, 'gender', 'sexe', 'femme')" ng-class="{'activeFilter' : 1 == genderActive}"></i>
+            <i class="fa fa-male" aria-hidden="true" ng-click="filter(0, 'gender', 'sexe', 'homme')" ng-class="{'activeFilter' : 0 == genderActive}"></i>
         </div>
         <div class="searchBar">
             <input type="text" ng-model="search" id="search" />
@@ -30,7 +30,11 @@
     </div>
     <div class="omg-pvs-activeFilters">
         <ul>
-            <li ng-repeat="activeFilter in activeFilters">{[ activeFilter.gender ]}</li>
+            <li ng-repeat="activeFilter in activeFilters">
+                <p ng-repeat="(key, value) in activeFilter">
+                    {[key]} : {[value]}
+                </p>
+            </li>
         </ul>
     </div>
     <div class="omg-pvs-list">

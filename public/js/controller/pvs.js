@@ -28,27 +28,40 @@ omgApp.controller("pvsCtrl", function($scope, API_URL, Pv, Group) {
         }
     };
 
-    $scope.filter = function (value, filter, name) {
+    $scope.filter = function (value, filter, label, name) {
         if (value === null) {
-            $scope.activeFilters.push(name);
             $scope[filter + 'Filter'] = value;
             $scope[filter + 'Active'] = value;
-
+            angular.forEach($scope.activeFilters, function(index, key) {
+                //Object.keys(objet) pour retrouver le nom des propriétés
+                if (Object.keys(index)[0] === label) {
+                    $scope.activeFilters.splice($scope.activeFilters.indexOf(index),1);
+                }
+            });
+            $scope.activeFilters.push({[label]:name});
         }
         else if ($scope[filter + 'Filter'] === value) {
             $scope[filter + 'Filter'] = '';
             $scope[filter + 'Active'] = null;
-            $scope.activeFilters.splice($scope.activeFilters.indexOf(name),1);
+            angular.forEach($scope.activeFilters, function(index, key) {
+                //Object.keys(objet) pour retrouver le nom des propriétés
+                if (Object.keys(index)[0] === label) {
+                    $scope.activeFilters.splice($scope.activeFilters.indexOf(index),1);
+                }
+            });
         }
         else {
-            $scope.activeFilters.push(name);
+            angular.forEach($scope.activeFilters, function(index, key) {
+                //Object.keys(objet) pour retrouver le nom des propriétés
+                if (Object.keys(index)[0] === label) {
+                    $scope.activeFilters.splice($scope.activeFilters.indexOf(index), 1);
+                }
+
+            });
+            $scope.activeFilters.push({[label]:name});
             $scope[filter + 'Filter'] = value;
             $scope[filter + 'Active'] = value;
         }
-
-        console.log($scope.activeFilters);
     };
-
-    ////////// FINIR FILTRES : SUPPRIMER DANS LE TABLEAU
 
 });
