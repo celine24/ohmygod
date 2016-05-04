@@ -1,58 +1,54 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>OH MY GOD !</title>
-    <link href="../node_modules/normalize.css/normalize.css" type="text/css" rel="stylesheet" />
-    <link href="../css/style.css" type="text/css" rel="stylesheet" />
-</head>
-<body ng-app="pvs">
-
-    <div class="omg-main-container">
-
-        <div class="omg-pv-container" ng-controller="pvController">
+        <div class="omg-pv-container">
             <section class="omg-pv-header">
                 <div class="omg-pv-bann-container">
-                    <img src="../img/pvs/ban-thumb/zeus.png" />
+                    <img src="../img/pvs/ban-thumb/{[ pv.greek.name ]}.png" />
                 </div>
 
-
                 <div class="omg-pv-name-container">
-                    <h1 class="omg-pv-greek-name">Zeus</h1>
-                    <div class="omg-pv-host-name">Elijah Dinsmore</div>
-                    <div class="omg-pv-celebrity-name">feat Brad Pitt</div>
+                    <h1 class="omg-pv-greek-name">{[ pv.greek.name ]}</h1>
+                    <div class="omg-pv-host-name">{[ pv.host.firstname + ' ' + pv.host.lastname ]}</div>
+                    <div class="omg-pv-celebrity-name">feat {[ pv.celebrity ]}</div>
                 </div>
             </section>
 
-            <section class="omg-pv-tabs" ng-controller="tabCtrl as greek">
-                <h2>Le Dieu</h2>
+            <section class="omg-pv-tabs" ng-controller="pvCtrl as greek">
+                <h2>Le Mythe</h2>
                 <div class="omg-pv-tab-nav-container">
                     <ul class="omg-pv-tab-nav" id="greek-tab">
-                        <li ng-class="{ active: greek.isSelected('greek-identity') }"><a href="#greek-tab" ng-click="greek.selectTab('greek-identity')">Identité</a></li>
-                        <li ng-class="{ active: greek.isSelected('greek-story') }"><a href="#greek-tab" ng-click="greek.selectTab('greek-story')">Histoire</a></li>
-                        <li ng-class="{ active: greek.isSelected('greek-opinion') }"><a href="#greek-tab" ng-click="greek.selectTab('greek-opinion')">Opinion</a></li>
+                        <li ng-class="{ active: greek.isSelected('greek-identity') }"><a href="#/pvs/{[ pv.id ]}#greek-tab" ng-click="greek.selectTab('greek-identity')">Identité</a></li>
+                        <li ng-class="{ active: greek.isSelected('greek-story') }"><a href="#/pvs/{[ pv.id ]}#greek-tab" ng-click="greek.selectTab('greek-story')">Histoire</a></li>
+                        <li ng-class="{ active: greek.isSelected('greek-opinion') }"><a href="#/pvs/{[ pv.id ]}#greek-tab" ng-click="greek.selectTab('greek-opinion')">Opinion</a></li>
                     </ul>
                 </div>
                 <div class="omg-pv-tabs-container">
                     <div class="omg-pv-tab" ng-show="greek.isSelected('greek-identity')">
-                        <p>blabla</p>
+                        <p><span class="omg-pv-identity-label">Nom : </span>{[ pv.greek.name ]}</p>
+                        <p><span class="omg-pv-identity-label">Titres : </span>{[ pv.greek.titles ]}</p>
+                        <p><span class="omg-pv-identity-label">Parents : </span>{[ pv.greek.parents ]}</p>
+                        <p><span class="omg-pv-identity-label">Enfants : </span>{[ pv.greek.descendants ]}</p>
+                        <p><span class="omg-pv-identity-label">Statut : </span>{[ pv.greek.status ]}</p>
+                        <p><span class="omg-pv-identity-label">Attributs : </span>{[ pv.greek.attributes ]}</p>
+                        <p><span class="omg-pv-identity-label">Forces : </span>{[ pv.greek.strengths ]}</p>
+                        <p><span class="omg-pv-identity-label">Faiblesses : </span>{[ pv.greek.weaknesses ]}</p>
+                        <p><span class="omg-pv-identity-label">Caractère : </span>{[ pv.greek.personality ]}</p>
+                        <p><span class="omg-pv-identity-label">Orientation sexuelle : </span>{[ pv.greek.gender_orientation ]}</p>
                     </div>
                     <div class="omg-pv-tab" ng-show="greek.isSelected('greek-story')">
-                        <p>bloblo</p>
+                        <p>{[ pv.greek.story ]}</p>
                     </div>
                     <div class="omg-pv-tab" ng-show="greek.isSelected('greek-opinion')">
-                        <p>blibli</p>
+                        <p>{[ pv.greek.opinion ]}</p>
                     </div>
                 </div>
             </section>
 
-            <section class="omg-pv-host-tabs" ng-controller="tabCtrl as host">
+            <section class="omg-pv-host-tabs" ng-controller="pvCtrl as host">
                 <h2>L'hôte</h2>
                 <div class="omg-pv-tab-nav-container">
                     <ul class="omg-pv-tab-nav" id="host-tab">
-                        <li ng-class="{ active: host.isSelected('host-identity') }"><a href="#host-tab" ng-click="host.selectTab('host-identity')">Identité</a></li>
-                        <li ng-class="{ active: host.isSelected('host-story') }"><a href="#host-tab" ng-click="host.selectTab('host-story')">Histoire</a></li>
-                        <li ng-class="{ active: host.isSelected('cohabitation') }"><a href="#host-tab" ng-click="host.selectTab('cohabitation')">Cohabitation</a></li>
+                        <li ng-class="{ active: host.isSelected('host-identity') }"><a href="#/pvs/{[ pv.id ]}#host-tab" ng-click="host.selectTab('host-identity')">Identité</a></li>
+                        <li ng-class="{ active: host.isSelected('host-story') }"><a href="#/pvs/{[ pv.id ]}#host-tab" ng-click="host.selectTab('host-story')">Histoire</a></li>
+                        <li ng-class="{ active: host.isSelected('cohabitation') }"><a href="#/pvs/{[ pv.id ]}#host-tab" ng-click="host.selectTab('cohabitation')">Cohabitation</a></li>
                     </ul>
                 </div>
                 <div class="omg-pv-tabs-container">
@@ -98,14 +94,3 @@
             </section>
 
         </div>
-
-
-
-    </div>
-
-    <script src="../node_modules/angular/angular.js" type="text/javascript"> </script>
-    <script src="../js/app.js" type="text/javascript"> </script>
-    <script src="../js/controller/tab.js" type="text/javascript"> </script>
-    <script src="../js/controller/pv.js" type="text/javascript"> </script>
-</body>
-</html>

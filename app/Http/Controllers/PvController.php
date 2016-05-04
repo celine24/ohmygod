@@ -13,21 +13,20 @@ class PvController extends Controller {
    */
   public function index($id = null)
   {
-
-    $pvs = Pv::with('Group')->with('Greek')->with('Host')->get();
-    return json_encode($pvs);
+//    $pvs = Pv::with('Group')->with('Greek')->with('Host')->get();
+//    return json_encode($pvs);
 //    return Response::json(array('data' => $pvs));
+//    $pv = Pv::with('Group')->with('Greek')->with('Host')->get();
+//    return json_encode($pv);
+    if ($id == null) {
+      $pvs = Pv::with('Group')->with('Greek')->with('Host')->get();
+      return json_encode($pvs);
+    }
+    else {
+      return $this->show($id);
+    }
 
-//    if ($id == null) {
-//      $pvs = Pv::orderBy('id')->get();
-//      return $pvs;
 //
-//    }
-//    else {
-//      return $this->show($id);
-//    }
-
-
 //    $pvs = Pv::get();
 //    return view('test', compact('pvs'));
 
@@ -61,7 +60,8 @@ class PvController extends Controller {
    */
   public function show($id)
   {
-    
+    $pv = Pv::where('id', $id)->with('Group')->with('Greek')->with('Host')->get();
+    return json_encode($pv);
   }
 
   /**

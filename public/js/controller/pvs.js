@@ -1,4 +1,4 @@
-omgApp.controller("pvsCtrl", function($scope, API_URL, Pv, Group) {
+omgApp.controller("pvsCtrl", function($scope, API_URI, Pv, Group) {
 
     Pv.fetch().success(function(resp){
         $scope.pvs = resp;
@@ -9,17 +9,6 @@ omgApp.controller("pvsCtrl", function($scope, API_URL, Pv, Group) {
     });
 
     $scope.activeFilters = [];
-
-    $scope.groupF = function (group) {
-        if ($scope.groupFilter === group.id) {
-            $scope.groupFilter = '';
-            $scope.activeGroup = null;
-        }
-        else {
-            $scope.groupFilter = group.id;
-            $scope.activeGroup = group.id;
-        }
-    };
 
     $scope.filter = function (value, filter, label, name) {
         if ($scope[filter + 'Filter'] === value) {
@@ -43,5 +32,17 @@ omgApp.controller("pvsCtrl", function($scope, API_URL, Pv, Group) {
             });
         }
     };
+
+    $scope.resetFilters = function() {
+        $scope.activeFilters = [];
+        $scope.groupActive = null;
+        $scope.genderActive = null;
+        $scope.statusActive = null;
+        $scope.alreadyPlayedActive = null;
+        $scope.groupFilter = '';
+        $scope.genderFilter = '';
+        $scope.statusFilter = '';
+        $scope.alreadyPlayedFilter = '';
+    }
 
 });

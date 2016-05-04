@@ -1,5 +1,5 @@
-var omgApp = angular.module('omgApp', ['ngRoute'])
-    .constant('API_URL', 'http://localhost:8000/api/');
+var omgApp = angular.module('omgApp', ['ngRoute', 'ngResource'])
+    .constant('API_URI', 'http://localhost:8000/api/');
 
 
 omgApp.config(function($routeProvider, $locationProvider, $interpolateProvider) {
@@ -13,12 +13,12 @@ omgApp.config(function($routeProvider, $locationProvider, $interpolateProvider) 
             controller: 'pvsCtrl'
         })
         .when('/pvs/:id', {
-            templateUrl: 'templates/pv-introduction.blade.php'
-            //controller : 'PvCtrl'
+            templateUrl: 'templates/pv-introduction.blade.php',
+            controller : 'pvCtrl'
         })
-        .otherwise({
-            redirectTo: '/'
-        });
+        //.otherwise({
+        //    redirectTo: '/'
+        //});
 
     $interpolateProvider.startSymbol('{[');
     $interpolateProvider.endSymbol(']}');

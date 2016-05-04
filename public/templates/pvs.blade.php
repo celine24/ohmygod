@@ -2,7 +2,7 @@
     <div class="omg-pvs-groups">
         <ul>
             <li ng-repeat="group in groups">
-                <div class="omg-pvs-group {[ group.class ]}Bg" ng-click="groupF(group)" ng-class="{'active':group.id == activeGroup}">
+                <div class="omg-pvs-group {[ group.class ]}Bg" ng-click="filter(group.id, 'group', 'groupe', group.name)" ng-class="{'active':group.id == groupActive}">
                     {[ group.name ]}
                 </div>
             </li>
@@ -29,41 +29,52 @@
         </div>
     </div>
     <div class="omg-pvs-activeFilters">
-        <ul>
-            <li ng-repeat="activeFilter in activeFilters">
-                <p ng-repeat="(key, value) in activeFilter">
-                    {[key]} : {[value]}
-                </p>
-            </li>
-        </ul>
+        <div>
+            <p>Filtres :</p>
+        </div>
+        <div>
+            <ul>
+                <li class="no-filters" ng-show="activeFilters.length === 0"><p>Aucun filtre actif</p></li>
+                <li ng-repeat="activeFilter in activeFilters">
+                    <p ng-repeat="(key, value) in activeFilter">
+                        {[key]} : {[value]}
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <button class="reset-filters" ng-show="activeFilters.length > 0" ng-click="resetFilters()">Supprimer les filtres</button>
+        </div>
     </div>
     <div class="omg-pvs-list">
-        <ul>
+        <ul class="container-grid-4">
             <li ng-repeat="pv in pvs | filter: {group : {id : groupFilter}} | filter:search | filter:{gender : genderFilter} | filter:{status : statusFilter} | filter:{already_played : alreadyPlayedFilter} ">
-                <div class="omg-pvs-pv {[ pv.group.class ]}Border">
-                    <div class="omg-pv-img">
-                        <img src="img/pvs/ban-thumb/{[ pv.greek.name ]}.png" title="" />
+                <a href="#/pvs/{[ pv.id ]}" alt="{[ pv.greek.name ]}" title="{[ pv.greek.name ]}">
+                    <div class="omg-pvs-pv {[ pv.group.class ]}Border">
+                        <div class="omg-pv-img">
+                            <img src="img/pvs/ban-thumb/{[ pv.greek.name ]}.png" title="" />
+                        </div>
+                        <div class="omg-pv-name-container {[ pv.group.class ]}Bg">
+                            <div class="omg-pv-name">
+                                {[ pv.greek.name ]}
+                            </div>
+                            <div class="omg-pv-surname">
+                                {[ pv.host.firstname + ' ' + pv.host.lastname ]}
+                            </div>
+                        </div>
+                        <div class="omg-pv-content">
+                            <div class="omg-pv-titles">
+                                {[ pv.greek.titles ]}
+                            </div>
+                            <div class="omg-pv-availability">
+                                personnage {[ pv.status ]}
+                            </div>
+                            <div class="omg-pv-celebrity">
+                               ft. {[ pv.celebrity ]}
+                            </div>
+                        </div>
                     </div>
-                    <div class="omg-pv-name-container {[ pv.group.class ]}Bg">
-                        <div class="omg-pv-name">
-                            {[ pv.greek.name ]}
-                        </div>
-                        <div class="omg-pv-surname">
-                            {[ pv.host.firstname + ' ' + pv.host.lastname ]}
-                        </div>
-                    </div>
-                    <div class="omg-pv-content">
-                        <div class="omg-pv-titles">
-                            {[ pv.greek.titles ]}
-                        </div>
-                        <div class="omg-pv-availability">
-                            personnage {[ pv.status ]}
-                        </div>
-                        <div class="omg-pv-celebrity">
-                           ft. {[ pv.celebrity ]}
-                        </div>
-                    </div>
-                </div>
+                </a>
             </li>
         </ul>
     </div>

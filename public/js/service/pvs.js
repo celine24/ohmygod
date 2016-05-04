@@ -1,9 +1,12 @@
 
-omgApp.factory("Pv", function ($http, API_URL) {
+omgApp.factory("Pv", function ($http, API_URI) {
 
     return {
         fetch : function() {
-            return $http.get(API_URL + 'pvs');
+            return $http.get(API_URI + 'pvs');
+        },
+        fetchOne : function(id) {
+            return $http.get(API_URI + 'pvs/' + id);
         }
         //,
         // create : function(movie) {
@@ -13,11 +16,6 @@ omgApp.factory("Pv", function ($http, API_URL) {
         //remove : function(id) {
         //    return $http.delete(API_URI + '/' + id);
         //},
-        //
-        //fetchOne : function(id) {
-        //    return $http.get(API_URI + '/' + id);
-        //},
-        //
         //update : function(movie) {
         //    return $http.put('/server/api/movies', movie);
         //}

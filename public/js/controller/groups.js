@@ -1,4 +1,4 @@
-omgApp.controller("groupsCtrl", function($scope, API_URL, Group) {
+omgApp.controller("groupsCtrl", function($scope, API_URI, Group) {
 
 
 

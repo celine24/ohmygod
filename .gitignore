@@ -1,6 +1,6 @@
 /spec
 /source
-/public/node_modules
+/public/bower_components
 /public/css/prepros.cfg
 /public/css/style.scss
 
